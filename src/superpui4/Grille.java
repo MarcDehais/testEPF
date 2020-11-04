@@ -184,27 +184,50 @@ public class Grille {
     }
     
     private boolean verifierD1(){
-    //     for (int k=0; k <4; k++ ){
-    //         if (this.getCellule(num_ligne,num_colonne).getJetonCourant()!= null && this.getCellule(num_ligne,num_colonne).getJetonCourant().equals(this.getCellule(num_ligne,num_colonne).getJetonCourant()) ){ 
-    //             D1rep = true;
-    //         }
-    //     }
-    //    return D1rep;
-        // for (int i=0; i<6;i++){
+        for(int num_colonne = 0; num_colonne<4;num_colonne++){
 
-        // }
+            int num_ligne = 0;
+
+            if (this.lireCouleurDuJeton(5,num_colonne) != null){
+                int l;
+                for (int k=0; k <3; k++ ){
+                    l = 5-k;
+                    if (this.lireCouleurDuJeton(num_ligne+l-0,num_colonne) != null) {
+                        if (this.lireCouleurDuJeton(num_ligne+l-1,num_colonne+1) != null && this.lireCouleurDuJeton(num_ligne+l-0,num_colonne+0).equals(this.lireCouleurDuJeton(num_ligne+l-1,num_colonne+1))){
+                            if (this.lireCouleurDuJeton(num_ligne+l-2,num_colonne+2) != null && this.lireCouleurDuJeton(num_ligne+l-1,num_colonne+1).equals(this.lireCouleurDuJeton(num_ligne+l-2,num_colonne+2))){
+                                if (this.lireCouleurDuJeton(num_ligne+l-3,num_colonne+3) != null && this.lireCouleurDuJeton(num_ligne+k+2,num_colonne+2).equals(this.lireCouleurDuJeton(num_ligne+l-3,num_colonne+3))) {
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         return false;
     }
 
     private boolean verifierD2(){
-        // boolean D2rep = false ;
+        for(int num_colonne = 3; num_colonne<7;num_colonne++){
 
-        // for (int k = 0; k<4 && 0>(num_ligne-k) && (num_ligne-k)>MAXLIGNE && 0>(num_colonne+k) && (num_colonne+k)>MAXCOLONNE ; k++){
-        //     if (this.getCellule(num_ligne,num_colonne).getJetonCourant()!= null && this.getCellule(num_ligne,num_colonne).getJetonCourant().equals(this.getCellule(num_ligne,num_colonne).getJetonCourant()) ){ 
-        //         D2rep = true;
-        //     }
-        // }
-        // return D2rep;
+            int num_ligne = 0;
+
+            if (this.lireCouleurDuJeton(5,num_colonne) != null){
+                int l;
+                for (int k=0; k <3; k++ ){
+                    l = 5-k;
+                    if (this.lireCouleurDuJeton(num_ligne+l-0,num_colonne) != null) {
+                        if (this.lireCouleurDuJeton(num_ligne+l-1,num_colonne-1) != null && this.lireCouleurDuJeton(num_ligne+l-0,num_colonne-0).equals(this.lireCouleurDuJeton(num_ligne+l-1,num_colonne-1))){
+                            if (this.lireCouleurDuJeton(num_ligne+l-2,num_colonne-2) != null && this.lireCouleurDuJeton(num_ligne+l-1,num_colonne-1).equals(this.lireCouleurDuJeton(num_ligne+l-2,num_colonne-2))){
+                                if (this.lireCouleurDuJeton(num_ligne+l-3,num_colonne-3) != null && this.lireCouleurDuJeton(num_ligne+k+2,num_colonne-2).equals(this.lireCouleurDuJeton(num_ligne+l-3,num_colonne-3))) {
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         return false;
     }
 
