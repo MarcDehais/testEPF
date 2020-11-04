@@ -11,7 +11,7 @@ package superpui4;
  */
 public class Grille {
     Cellule [][] Grille;
-    final static int MAXLIGNE = 6;
+    final static int MAXLIGNE = 7;
     final static int MAXCOLONNE = 7;
     
     public Grille (){
