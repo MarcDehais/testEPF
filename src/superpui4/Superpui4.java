@@ -5,7 +5,7 @@
  */
 package superpui4;
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
 /**
  *
@@ -15,15 +15,9 @@ public class Superpui4 {
 
 //pour ce faciliter la vie
 
-
-
-
     public static void main(String[] args) {
         System.out.println("Alleeeeeeeeeeez !");
         Partie une_partie = new Partie();
         une_partie.debuterPartie();
-
     }
-
 }
-    
