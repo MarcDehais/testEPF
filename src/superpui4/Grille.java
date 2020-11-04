@@ -141,7 +141,7 @@ public class Grille {
     }
 
 
-    private  boolean verifierLignes (){
+        private  boolean verifierLignes (){
         for(int num_ligne =0; num_ligne<6;num_ligne++){
             
             int num_colonne = 0;
@@ -150,10 +150,12 @@ public class Grille {
                 int l;
                 for (int k=0; k <4; k++ ){
                     l = 6-k;
-                    if (this.lireCouleurDuJeton(num_ligne,num_colonne+l-1) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-0) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-0).equals(this.lireCouleurDuJeton(num_ligne,num_colonne+l-1))) {
-                        if (this.lireCouleurDuJeton(num_ligne,num_colonne+l-2) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-1).equals(this.lireCouleurDuJeton(num_ligne,num_colonne+l-2))) {
-                            if (this.lireCouleurDuJeton(num_ligne,num_colonne+l-3) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-2).equals(this.lireCouleurDuJeton(num_ligne,num_colonne+l-3))) { 
-                                return true;
+                    if (this.lireCouleurDuJeton(num_ligne,num_colonne+l-0) != null){
+                        if (this.lireCouleurDuJeton(num_ligne,num_colonne+l-1) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-0).equals(this.lireCouleurDuJeton(num_ligne,num_colonne+l-1))) {
+                            if (this.lireCouleurDuJeton(num_ligne,num_colonne+l-2) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-1).equals(this.lireCouleurDuJeton(num_ligne,num_colonne+l-2))) {
+                                if (this.lireCouleurDuJeton(num_ligne,num_colonne+l-3) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-2).equals(this.lireCouleurDuJeton(num_ligne,num_colonne+l-3))) { 
+                                    return true;
+                                }
                             }
                         }
                     }
@@ -174,10 +176,12 @@ public class Grille {
                 int l;
                 for (int k=0; k <3; k++ ){
                     l = 5-k;
-                    if (this.lireCouleurDuJeton(num_ligne+l-1,num_colonne) != null && this.lireCouleurDuJeton(num_ligne+l,num_colonne).equals(this.lireCouleurDuJeton(num_ligne+l-1,num_colonne))){
-                        if (this.lireCouleurDuJeton(num_ligne+l-2,num_colonne) != null && this.lireCouleurDuJeton(num_ligne+l-1,num_colonne).equals(this.lireCouleurDuJeton(num_ligne+l-2,num_colonne))){
-                            if (this.lireCouleurDuJeton(num_ligne+l-3,num_colonne) != null && this.lireCouleurDuJeton(num_ligne+k+2,num_colonne).equals(this.lireCouleurDuJeton(num_ligne+l-3,num_colonne))) {
-                                return true;
+                    if (this.lireCouleurDuJeton(num_ligne+l-0,num_colonne) != null) {
+                        if (this.lireCouleurDuJeton(num_ligne+l-1,num_colonne) != null && this.lireCouleurDuJeton(num_ligne+l-0,num_colonne).equals(this.lireCouleurDuJeton(num_ligne+l-1,num_colonne))){
+                            if (this.lireCouleurDuJeton(num_ligne+l-2,num_colonne) != null && this.lireCouleurDuJeton(num_ligne+l-1,num_colonne).equals(this.lireCouleurDuJeton(num_ligne+l-2,num_colonne))){
+                                if (this.lireCouleurDuJeton(num_ligne+l-3,num_colonne) != null && this.lireCouleurDuJeton(num_ligne+k+2,num_colonne).equals(this.lireCouleurDuJeton(num_ligne+l-3,num_colonne))) {
+                                    return true;
+                                }
                             }
                         }
                     }
@@ -186,7 +190,7 @@ public class Grille {
         }
         return false;
     }
-
+    
     private boolean verifierD1(){
     //     for (int k=0; k <4; k++ ){
     //         if (this.getCellule(num_ligne,num_colonne).getJetonCourant()!= null && this.getCellule(num_ligne,num_colonne).getJetonCourant().equals(this.getCellule(num_ligne,num_colonne).getJetonCourant()) ){ 
