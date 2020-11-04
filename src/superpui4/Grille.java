@@ -192,10 +192,10 @@ public class Grille {
                 int l;
                 for (int k=0; k <3; k++ ){
                     l = 5-k;
-                    if (this.lireCouleurDuJeton(num_ligne+l-0,num_colonne) != null) {
+                    if (this.lireCouleurDuJeton(num_ligne+l-0,num_colonne+0) != null) {
                         if (this.lireCouleurDuJeton(num_ligne+l-1,num_colonne+1) != null && this.lireCouleurDuJeton(num_ligne+l-0,num_colonne+0).equals(this.lireCouleurDuJeton(num_ligne+l-1,num_colonne+1))){
                             if (this.lireCouleurDuJeton(num_ligne+l-2,num_colonne+2) != null && this.lireCouleurDuJeton(num_ligne+l-1,num_colonne+1).equals(this.lireCouleurDuJeton(num_ligne+l-2,num_colonne+2))){
-                                if (this.lireCouleurDuJeton(num_ligne+l-3,num_colonne+3) != null && this.lireCouleurDuJeton(num_ligne+k+2,num_colonne+2).equals(this.lireCouleurDuJeton(num_ligne+l-3,num_colonne+3))) {
+                                if (this.lireCouleurDuJeton(num_ligne+l-3,num_colonne+3) != null && this.lireCouleurDuJeton(num_ligne+l+2,num_colonne+2).equals(this.lireCouleurDuJeton(num_ligne+l-3,num_colonne+3))) {
                                     return true;
                                 }
                             }
@@ -219,7 +219,7 @@ public class Grille {
                     if (this.lireCouleurDuJeton(num_ligne+l-0,num_colonne) != null) {
                         if (this.lireCouleurDuJeton(num_ligne+l-1,num_colonne-1) != null && this.lireCouleurDuJeton(num_ligne+l-0,num_colonne-0).equals(this.lireCouleurDuJeton(num_ligne+l-1,num_colonne-1))){
                             if (this.lireCouleurDuJeton(num_ligne+l-2,num_colonne-2) != null && this.lireCouleurDuJeton(num_ligne+l-1,num_colonne-1).equals(this.lireCouleurDuJeton(num_ligne+l-2,num_colonne-2))){
-                                if (this.lireCouleurDuJeton(num_ligne+l-3,num_colonne-3) != null && this.lireCouleurDuJeton(num_ligne+k+2,num_colonne-2).equals(this.lireCouleurDuJeton(num_ligne+l-3,num_colonne-3))) {
+                                if (this.lireCouleurDuJeton(num_ligne+l-3,num_colonne-3) != null && this.lireCouleurDuJeton(num_ligne+l+2,num_colonne-2).equals(this.lireCouleurDuJeton(num_ligne+l-3,num_colonne-3))) {
                                     return true;
                                 }
                             }
