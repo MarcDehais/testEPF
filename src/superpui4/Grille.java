@@ -295,3 +295,4 @@ public class Grille {
 
 // // Jeton qqc = null; //pour sauvergarder le jeton.courant de la celulle en question
 // // qqc = Grille .getCe
+// ¨PARCE QUE FAUX UN GIT PROPRE
