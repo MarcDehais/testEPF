@@ -138,7 +138,7 @@ public class Grille {
 
 
     public boolean etreGagnantePourJoueur(Joueur J1) {//renvoie vrai si la grille est gagnante	pour le joueue passé en paramètre,c’est-à-dire	 que	 4	 pions	 de	 sa	 couleur	 sont	 alignés	 en	 ligne,	 en	 colonne	ou	en	diagonale.
-        boolean rep = false;  
+        boolean rep = false;  //coucou
         for (int i=0; i < MAXLIGNE-3; i++) { 
             for (int j =0;j < MAXCOLONNE-4; j++){    
                 if (verifierLaLigne(i, j) ||verifierLaColonne(i, j) || verifierD1(i, j) || verifierD2(i, j) ){
