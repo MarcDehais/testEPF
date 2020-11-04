@@ -18,8 +18,14 @@ public class Grille {
     public Grille (){
         // matrice de 6 lignes et 7 colonnes
         this.grille = new Cellule [MAXLIGNE][MAXCOLONNE];
-    }    
-    
+         for (int i = 0; i < 6; i++){
+             for (int j = 0; j < 7; j++){
+                 this.grille[i][j] = new Cellule();
+             }
+         }
+    }
+
+
     //je propose grille = new matrice()
 
 
@@ -144,7 +150,7 @@ public class Grille {
                 int l;
                 for (int k=0; k <4; k++ ){
                     l = 6-k;
-                    if (this.lireCouleurDuJeton(num_ligne,num_colonne+l-1) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-0).equals(this.lireCouleurDuJeton(num_ligne,num_colonne+l-1))) {
+                    if (this.lireCouleurDuJeton(num_ligne,num_colonne+l-1) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-0) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-0).equals(this.lireCouleurDuJeton(num_ligne,num_colonne+l-1))) {
                         if (this.lireCouleurDuJeton(num_ligne,num_colonne+l-2) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-1).equals(this.lireCouleurDuJeton(num_ligne,num_colonne+l-2))) {
                             if (this.lireCouleurDuJeton(num_ligne,num_colonne+l-3) != null && this.lireCouleurDuJeton(num_ligne,num_colonne+l-2).equals(this.lireCouleurDuJeton(num_ligne,num_colonne+l-3))) { 
                                 return true;
