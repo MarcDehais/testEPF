@@ -35,9 +35,6 @@ public class Grille {
         int i=0;
         
         for (i=MAXLIGNE-1; i>=0; i--) {
-            // Integer lil = i;
-            // Integer lol = num_colonne;
-            // System.out.println(lil.toString()+","+lol.toString());
             if (this.getCellule(i, num_colonne).getJetonCourant() == null) {
                 this.getCellule(i, num_colonne).setJetonCourant(Jeton); // Grille [i][7] est de classe cellule
             return true;
@@ -130,13 +127,9 @@ public class Grille {
 
     public boolean etreGagne() {//renvoie vrai si la grille est gagnante,c’est-à-dire que 4	pions de meme couleur sont alignés en ligne, en colonne	ou en diagonale.
         boolean lig = verifierLignes();
-        System.out.println(lig);
         boolean col = verifierColonnes();
-        System.out.println(col);
         boolean d1 = verifierD1();
-        System.out.println(d1);
         boolean d2 = verifierD2();
-        System.out.println(d2);
         return lig || col || d1 || d2;
     }
 
@@ -166,7 +159,6 @@ public class Grille {
     }
 
     private boolean verifierColonnes (){
-        System.out.println("je veux passer ici");
 
         for(int num_colonne = 0; num_colonne<7;num_colonne++){
 
@@ -230,13 +222,9 @@ public class Grille {
 
 
     public boolean colonneRemplie (int num_colonne ){//!!!!! ajouter un paramètre oublié !!!!! renvoie	vrai	si	la	colonne	est	remplie	(on	ne	peut	y	jouer	un	Jeton)
-        if (this.getCellule(0,num_colonne).getJetonCourant() != null) {//revoir codage ligne
-            //revoir s'il faut scanner toute la colonne
-            return true;
-        }
-        else {
-            return false;
-        }    
+        //revoir codage ligne
+        //revoir s'il faut scanner toute la colonne
+        return this.getCellule(0,num_colonne).getJetonCourant() != null;
     }
 
 

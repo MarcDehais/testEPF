@@ -34,14 +34,12 @@ public class Jeton {
         if ((e != null) && (e.getClass() == this.getClass())){
             Jeton j = (Jeton) e;
             if (j.lireCouleur() == null){
-                // System.out.println("couleur du jeton k+1 est null");
+                return false;
             }
             else if (this.lireCouleur() == null){
-                // System.out.println("couleur du jeton k est null");
+                return false;
             }
             else{
-                // System.out.println("la couleur du jeton k+1 est : "+j.lireCouleur());
-                // System.out.println("la couleur du jeton k   est : "+this.lireCouleur());
                 res = j.lireCouleur().equals(this.lireCouleur());
             }
         }

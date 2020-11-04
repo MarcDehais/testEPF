@@ -156,13 +156,10 @@ public class Cellule {
         if ((e != null) && (e.getClass() == this.getClass())){
             Cellule j = (Cellule) e;
             if (j.getJetonCourant() == null){
-                // System.out.println("jeton de la cellule k+1 est null");
             }
             else if (this.getJetonCourant() == null){
-                // System.out.println("jeton de la celule k est null");
             }
             else{
-                // System.out.println("cellule ok");
                 res = j.getJetonCourant().equals(this.getJetonCourant());
             }
         }
